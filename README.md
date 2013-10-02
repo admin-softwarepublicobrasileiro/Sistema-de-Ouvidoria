@@ -29,56 +29,56 @@ Caso você seja um usuário iniciante, sugerimos que você use o <i>framework De
 
 <b>Passo 2:</b> Abra o MySQL Browser, escolha a opção OpenScript do menu File e selecione o arquivo <i>sistema_ouvidoria.sql</i> para que seja aberto.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/1.png) 
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/1.png) 
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/1.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/1.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;	
 
 <b>Passo 3:</b> Execute o script para a criação do banco de dados com os dados mínimos para configuração de um novo Órgão.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/2.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/2.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/2.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/2.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 ##3.2 - Aplicação
 	
 <b>Passo 1:</b> Baixe os arquivos-fonte do Sistema Ouvidoria e faça a configuração do projeto no Eclipse apontando para o diretório onde serão armazenados. Para isso, abra o Eclipse, vá em “File → Import”. Abrirá a tela de seleção do tipo de importação a se fazer. Escolha a opção “Maven → Existing Maven Project”.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/3.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/3.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/3.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/3.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 Em seguida, você irá indicar ao Eclipse, onde está o código fonte da aplicação. Indique a pasta onde está o código da aplicação baixado do portal. O Eclipse irá 'enxergar' o arquivo de configuração <i>'pom.xml'</i>. Selecione o arquivo e clique em “Finish“. Após isso, o Eclipse irá verificar as dependências e fará o download automático das bibliotecas que você irá precisar.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/4.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/4.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/4.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/4.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 Obs: O arquivo <i>pom.xml</i> do Maven, assim como outros arquivos de configuração, foram configurados para funcionamento da aplicação com o servidor Tomcat. Para utilização com outros servidores de aplicações, podem ser necessárias algumas alterações no arquivo, como por exemplo, remoção de bibliotecas que o servidor já possua.
 
 <b>Passo 2:</b> Configuração de banco nos arquivos <i>context.xml</i> e <i>hibernate.cfg.xml</i> com o nome do database, usuário e senha criados. Abra o arquivo <i>'context.xml'</i> no caminho indicado na figura abaixo.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/5.png) &nbsp;
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/5.png) &nbsp;
 
 Procure pelas linhas onde estão os parâmetros <i>“username”</i> e <i>“password”</i>. Nos valores destes parâmetros insira o nome de usuário e a senha que terão permissão de acesso ao banco de dados.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/6.png) &nbsp;
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/6.png) &nbsp;
 
 Agora, configure o arquivo <i>'hibernate.cfg.xml'</i>. O arquivo está no caminho indicado na figura abaixo.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/7.png) &nbsp;
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/7.png) &nbsp;
 
 Configure a <i>string</i> de conexão da aplicação com o banco de dados. Insira também o <i>'username</i>' e o <i>'password'</i> para acesso ao banco de dados. Não se esqueça de mudar o parâmetro “Show Sql” para <i>false</i> caso não queria que ele seja impresso no console/log.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/8.png) &nbsp;
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/8.png) &nbsp;
 
 <b>Passo 3:</b> Geração do pacote <i>“ouvidoria.war”</i> da aplicação Ouvidoria.
 Antes de gerar o pacote <i>'war'</i>, é interessante que você clique com o botão direito do mouse no nome do projeto (ouvidoria) e escolha a opção “Refresh”. Também é recomendado que você clique com o botão direito do mouse no arquivo <i>'pom.xml'</i> e escolha a opção “Run as → Maven Clean”. Com isso, garantimos que o arquivo <i>'war'</i> será gerado totalmente atualizado. Feito isso, clique com o botão direito do mouse no nome do projeto (Ouvidoria), escolha a opção “Export → War File”. Escolha o local onde o arquivo será criado e clique em “Finish”.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/9.png) &nbsp;
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/9.png) &nbsp;
 
 <b>Passo 4:</b> Após gerar o arquivo <i>ouvidoria.war</i>, copie o mesmo para a pasta “webapps” do Tomcat . 
 
@@ -91,34 +91,34 @@ Caso você tenha instalado em sua máquina, outra versão do java, é necessári
 
 <b>Passo 6:</b> Após iniciar o Tomcat, acesse a aplicação pelo <i>browser</i>.  O Tomcat, por padrão, responde as requisições na porta 8080. Portanto, se as únicas modificações feitas no arquivo <i>context.xml</i> foram a do usuário e senha do banco, o caminho para acesso será [http://localhost:8080/ouvidoria](http://localhost:8080/ouvidoria).
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/10.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/10.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/10.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/10.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 ##4 - Configurando um novo Órgão
 
 <b>Passo 1:</b> Para configurar uma nova Ouvidoria, você deverá acessar a aplicação com o usuário Administrador do Sistema (CPF → 11111111111, senha → 123). Para ter acesso ao menu “Acesso Restrito” é necessário alterar a URL substituindo o trecho “MainInternet” por “MainIntranet”:
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/11.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/11.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/11.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/11.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 <b>Passo 2:</b> Após o acesso, configure os parâmetros gerais do sistema , acessando o 	menu “Administrar/Parâmetros Gerais”.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/12.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/12.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/12.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/12.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 <b>Passo 3:</b> Verifique se o campo “Diretório raiz da aplicação” foi preenchido com uma estrutura de diretório válida, com permissões de leitura e escrita para o usuário do Tomcat (novamente, para saber como fazer isso, é necessário saber qual sistema operacional e versão do sistema você está usando e buscar por um tutorial adequado, pois essas configurações podem variar). Esse será o diretório de trabalho do sistema e será usado para criar os anexos e outros arquivos necessários. Também tenha o cuidado de colocar um endereço válido para o servidor de e-mail que será usado na aplicação. Por último, tenha o cuidado de incluir uma “/” ao final do caminho do diretório raiz da aplicação.
 
 <b>Passo 4:</b> Cadastre o um novo Órgão, acessando o menu “Administrar/Manter Órgãos”.
 	
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/13.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/13.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/13.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/13.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
 Nesta parte da instalação, é preciso ter um cuidado especial com as datas de configuração do novo órgão criado. Tenha certeza que:
@@ -129,24 +129,24 @@ Nesta parte da instalação, é preciso ter um cuidado especial com as datas de 
 
 <b>Passo 5:</b> Após o cadastro do novo órgão, atualize as configurações do órgão, acessando “Administrar/Manter >> Órgão”. Após isso clique no botão 	“Atualizar Configuração” pertinente ao Órgão cadastrado. Abaixo, explicações sobre os textos que são configuráveis e qual a finalidade de cada um.
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/14.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/14.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/14.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/14.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/15.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/15.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/15.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/15.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/16.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/16.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/16.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/16.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/17.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/17.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/17.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/17.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 	
 <b>Abaixo, uma explicação para os demais campos de configuração:</b>
@@ -197,7 +197,7 @@ Indica que meio de comunicação o usuário pode informar para o recebimento de 
 
 <b>b)</b> Vá novamente ao Eclipse, encontra a classe <i>OrgãoCtrl.java</i> e substitua o código de órgão existente pelo código de órgão da nova instituição. 
 	
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/18.png) &nbsp;
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/18.png) &nbsp;
 
 Feita esta substituição, salve o arquivo e execute novamente o procedimento de criação do  pacote <i>'ouvidoria.war'</i>.
 
@@ -209,9 +209,9 @@ Uma vez parado o servidor, abra o arquivo <i>'ouvidoria.war'</i> com um descompa
 
 <b>Para acessar a parte de “acesso restrito”, como na figura, basta editar a url de acesso no navegador, trocando a parte onde diz “MainInternet” para “MainIntranet”.</b>
 
-![](https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/19.png)
+![](https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/19.png)
 
-<a href="https://raw.github.com/gabrielamayoli/Sistema-de-Ouvidoria/master/imagens/19.png" target="_blank">Clique para ver a imagem ampliada</a>
+<a href="https://raw.github.com/admin-softwarepublicobrasileiro/Sistema-de-Ouvidoria/master/imagens/19.png" target="_blank">Clique para ver a imagem ampliada</a>
 &nbsp;
 	
 <b>Passo 8:</b> Por fim, crie as informações necessárias para uso do sistema. A melhor ordem é se criar “Sub Órgão”, “Localidades”, “Tipos de Mensagens”, “Assuntos de 	Mensagens”, “Usuários”, nessa ordem, de forma a atender todas as dependências 	para o funcionamento do sistema. Obrigatoriamente, você precisa cadastrar um 	usuário no perfil “Ouvidor Geral”.
